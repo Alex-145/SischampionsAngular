@@ -26,4 +26,8 @@ export class SchoolService {
   deleteSchool(id:number){
     return this.http.delete(this.baseurl+'schools/'+id+'/');
   }
+  UpdateSchool(id:number, school:School){
+    return this.http.put(this.baseurl+'schools/'+id+'/',school,{headers:this.reqHeader});
+  }
 }
+
